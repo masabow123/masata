@@ -5,6 +5,7 @@
   const setOpen = (open) => {
     nav.classList.toggle('is-open', open);
     toggle.setAttribute('aria-expanded', String(open));
+    toggle.textContent = open ? "Close" : "Menu";
   };
   toggle.addEventListener('click', () => setOpen(!nav.classList.contains('is-open')));
   nav.addEventListener('click', (e) => { if (e.target.closest('a')) setOpen(false); });

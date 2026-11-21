@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>masata. | Official Site</title>
   <meta name="description" content="音楽家 masata. のオフィシャルサイト。プロフィール、リリース、お知らせ。">
-  <meta name="theme-color" content="#f7efe3">
+  <meta name="theme-color" content="#efede8">
 
-  <!-- SNSでシェアされたときの表示。公開URLと画像が決まったら書き換えてください -->
+  <!-- SNSでシェアされたときの表示。画像が決まったら assets/ogp.png を追加してください -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="masata. | Official Site">
   <meta property="og:description" content="音楽家 masata. のオフィシャルサイト。">
@@ -17,7 +17,7 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script>document.documentElement.classList.add('js');</script>
 </head>
@@ -26,15 +26,12 @@
 
   <header class="site-header">
     <a class="logo" href="#top" aria-label="masata. トップへ">masata<span class="dot">.</span></a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav">
-      <span class="nav-toggle__bar"></span>
-      <span class="visually-hidden">メニュー</span>
-    </button>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
     <nav id="nav" class="nav" aria-label="メインメニュー">
       <a href="#profile">Profile</a>
       <a href="#music">Music</a>
       <a href="#news">News</a>
-      <a href="#links">Links</a>
+      <a href="#links">Contact</a>
     </nav>
   </header>
 
@@ -42,29 +39,32 @@
 
     <!-- ============ HERO ============ -->
     <section class="hero" id="top">
-      <div class="blob blob--1" aria-hidden="true"></div>
-      <div class="blob blob--2" aria-hidden="true"></div>
-      <div class="blob blob--3" aria-hidden="true"></div>
+      <div class="hero__meta">
+        <p>Musician / Songwriter</p>
+        <p>Official Site</p>
+      </div>
 
-      <div class="hero__inner">
-        <p class="hero__eyebrow">Musician / Songwriter</p>
-        <h1 class="hero__title">masata<span class="dot">.</span></h1>
+      <h1 class="hero__title">masata<span class="dot">.</span></h1>
+
+      <div class="hero__foot">
         <!-- キャッチコピー：自由に書き換えてください -->
         <p class="hero__lead">ここにキャッチコピーが入ります。<br>あなたの音楽をひとことで。</p>
         <div class="hero__actions">
-          <a class="btn btn--primary" href="#music">最新リリースを聴く</a>
-          <a class="btn btn--ghost" href="#links">お問い合わせ</a>
+          <a class="arrow-link" href="#music">Listen</a>
+          <a class="arrow-link" href="#links">Contact</a>
         </div>
-      </div>
-
-      <div class="wave" aria-hidden="true">
-        <svg viewBox="0 0 1440 90" preserveAspectRatio="none"><path d="M0 48c160-40 320-40 480-8s320 56 480 32 320-64 480-40v58H0z"/></svg>
       </div>
     </section>
 
     <!-- ============ PROFILE ============ -->
-    <section class="section section--paper" id="profile">
-      <div class="container profile">
+    <section class="section" id="profile">
+      <header class="section__head reveal">
+        <span class="section__no">01</span>
+        <h2 class="section__title">Profile</h2>
+        <p class="section__ja">プロフィール</p>
+      </header>
+
+      <div class="profile">
         <div class="profile__photo reveal">
           <!-- 写真を入れるとき：下の行のコメントを外し、assets/ に画像を置いてください
           <img src="assets/profile.jpg" alt="masata. のアーティスト写真">
@@ -72,9 +72,7 @@
           <span class="placeholder-note">Artist Photo</span>
         </div>
         <div class="profile__body reveal">
-          <p class="section__label">Profile</p>
-          <h2 class="section__title">プロフィール</h2>
-          <p>ここにプロフィール文が入ります。出身地や活動を始めたきっかけ、どんな音楽を作っているのかなどを、2〜3段落で紹介しましょう。</p>
+          <p class="profile__lead">ここにプロフィール文が入ります。出身地や活動を始めたきっかけ、どんな音楽を作っているのかなどを紹介しましょう。</p>
           <p>影響を受けたアーティスト、これまでの主なリリース、いま取り組んでいることなどを書くと、はじめて訪れた人にも伝わりやすくなります。</p>
           <dl class="facts">
             <div><dt>Based in</dt><dd>活動拠点</dd></div>
@@ -87,102 +85,99 @@
 
     <!-- ============ MUSIC ============ -->
     <section class="section" id="music">
-      <div class="container">
-        <header class="section__head reveal">
-          <p class="section__label">Music</p>
-          <h2 class="section__title">作品・リリース</h2>
-        </header>
+      <header class="section__head reveal">
+        <span class="section__no">02</span>
+        <h2 class="section__title">Music</h2>
+        <p class="section__ja">作品・リリース</p>
+      </header>
 
-        <!-- 最新リリース（大きく表示） -->
-        <article class="feature reveal">
-          <div class="cover cover--a">
-            <!-- <img src="assets/release-01.jpg" alt="「曲タイトル」ジャケット"> -->
-            <span class="placeholder-note">Cover</span>
+      <!-- 最新リリース（大きく表示） -->
+      <article class="feature reveal">
+        <div class="cover cover--a">
+          <!-- <img src="assets/release-01.jpg" alt="「曲タイトル」ジャケット"> -->
+          <span class="placeholder-note">Cover</span>
+        </div>
+        <div class="feature__body">
+          <p class="tag">New Release</p>
+          <h3 class="feature__title">最新リリースのタイトル</h3>
+          <p class="meta">Single — 2026.00.00</p>
+          <p class="feature__text">作品の紹介文が入ります。どんな気持ちで作ったのか、聴きどころなどを短く。</p>
+          <div class="feature__links">
+            <a class="arrow-link" href="#">Spotify</a>
+            <a class="arrow-link" href="#">Apple Music</a>
+            <a class="arrow-link" href="#">YouTube</a>
           </div>
-          <div class="feature__body">
-            <p class="tag">New Release</p>
-            <h3 class="feature__title">最新リリースのタイトル</h3>
-            <p class="meta">Single ・ 2026.00.00</p>
-            <p>作品の紹介文が入ります。どんな気持ちで作ったのか、聴きどころなどを短く。</p>
-            <div class="chips">
-              <a class="chip" href="#">Spotify</a>
-              <a class="chip" href="#">Apple Music</a>
-              <a class="chip" href="#">YouTube</a>
-            </div>
-          </div>
-        </article>
+        </div>
+      </article>
 
-        <!-- 過去のリリース：<li>…</li> をコピーして増やせます -->
-        <ul class="releases">
-          <li class="release reveal">
-            <a href="#">
-              <div class="cover cover--b"><span class="placeholder-note">Cover</span></div>
-              <h3 class="release__title">作品タイトル</h3>
-              <p class="meta">EP ・ 2025</p>
-            </a>
-          </li>
-          <li class="release reveal">
-            <a href="#">
-              <div class="cover cover--c"><span class="placeholder-note">Cover</span></div>
-              <h3 class="release__title">作品タイトル</h3>
-              <p class="meta">Single ・ 2025</p>
-            </a>
-          </li>
-          <li class="release reveal">
-            <a href="#">
-              <div class="cover cover--d"><span class="placeholder-note">Cover</span></div>
-              <h3 class="release__title">作品タイトル</h3>
-              <p class="meta">Single ・ 2024</p>
-            </a>
-          </li>
-        </ul>
-      </div>
+      <!-- 過去のリリース：<li>…</li> をコピーして増やせます -->
+      <ul class="releases">
+        <li class="release reveal">
+          <a href="#">
+            <div class="cover cover--b"><span class="placeholder-note">Cover</span></div>
+            <div class="release__row"><h3 class="release__title">作品タイトル</h3><p class="meta">EP — 2025</p></div>
+          </a>
+        </li>
+        <li class="release reveal">
+          <a href="#">
+            <div class="cover cover--c"><span class="placeholder-note">Cover</span></div>
+            <div class="release__row"><h3 class="release__title">作品タイトル</h3><p class="meta">Single — 2025</p></div>
+          </a>
+        </li>
+        <li class="release reveal">
+          <a href="#">
+            <div class="cover cover--d"><span class="placeholder-note">Cover</span></div>
+            <div class="release__row"><h3 class="release__title">作品タイトル</h3><p class="meta">Single — 2024</p></div>
+          </a>
+        </li>
+      </ul>
     </section>
 
     <!-- ============ NEWS ============ -->
-    <section class="section section--paper" id="news">
-      <div class="container container--narrow">
-        <header class="section__head reveal">
-          <p class="section__label">News</p>
-          <h2 class="section__title">お知らせ</h2>
-        </header>
+    <section class="section" id="news">
+      <header class="section__head reveal">
+        <span class="section__no">03</span>
+        <h2 class="section__title">News</h2>
+        <p class="section__ja">お知らせ</p>
+      </header>
 
-        <ul class="news">
-          <li class="reveal"><time datetime="2026-01-01">2026.00.00</time><p>お知らせの本文が入ります。新曲のリリースなど。</p></li>
-          <li class="reveal"><time datetime="2026-01-01">2026.00.00</time><p>お知らせの本文が入ります。</p></li>
-          <li class="reveal"><time datetime="2026-01-01">2026.00.00</time><p>オフィシャルサイトを公開しました。</p></li>
-        </ul>
-      </div>
+      <ul class="news">
+        <li class="reveal"><time datetime="2026-01-01">2026.00.00</time><p>お知らせの本文が入ります。新曲のリリースなど。</p></li>
+        <li class="reveal"><time datetime="2026-01-01">2026.00.00</time><p>お知らせの本文が入ります。</p></li>
+        <li class="reveal"><time datetime="2026-01-01">2026.00.00</time><p>オフィシャルサイトを公開しました。</p></li>
+      </ul>
     </section>
 
     <!-- ============ LINKS / CONTACT ============ -->
-    <section class="section section--accent" id="links">
-      <div class="container container--narrow center">
-        <header class="section__head reveal">
-          <p class="section__label">Links</p>
-          <h2 class="section__title">リンク・連絡先</h2>
-        </header>
+    <section class="section section--dark" id="links">
+      <header class="section__head reveal">
+        <span class="section__no">04</span>
+        <h2 class="section__title">Contact</h2>
+        <p class="section__ja">リンク・連絡先</p>
+      </header>
 
-        <!-- href="#" を各サービスのURLに書き換えてください。不要なものは行ごと削除 -->
-        <ul class="links reveal">
-          <li><a href="#" target="_blank" rel="noopener">Spotify</a></li>
-          <li><a href="#" target="_blank" rel="noopener">Apple Music</a></li>
-          <li><a href="#" target="_blank" rel="noopener">YouTube</a></li>
-          <li><a href="#" target="_blank" rel="noopener">Instagram</a></li>
-          <li><a href="#" target="_blank" rel="noopener">X</a></li>
-        </ul>
+      <!-- href="#" を各サービスのURLに書き換えてください。不要なものは行ごと削除 -->
+      <ul class="links">
+        <li class="reveal"><a href="#" target="_blank" rel="noopener"><span>Spotify</span></a></li>
+        <li class="reveal"><a href="#" target="_blank" rel="noopener"><span>Apple Music</span></a></li>
+        <li class="reveal"><a href="#" target="_blank" rel="noopener"><span>YouTube</span></a></li>
+        <li class="reveal"><a href="#" target="_blank" rel="noopener"><span>Instagram</span></a></li>
+        <li class="reveal"><a href="#" target="_blank" rel="noopener"><span>X</span></a></li>
+      </ul>
 
-        <div class="contact reveal">
-          <p>お問い合わせはこちらから。</p>
-          <a class="btn btn--primary" href="mailto:masatadot@gmail.com">メールで問い合わせる</a>
-        </div>
+      <div class="contact reveal">
+        <p class="contact__label">お問い合わせはこちらから</p>
+        <a class="contact__mail" href="mailto:masatadot@gmail.com">masatadot@gmail.com</a>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p class="logo logo--footer">masata<span class="dot">.</span></p>
-    <p class="copyright">&copy; <span id="year">2026</span> masata.</p>
+    <p class="site-footer__mark" aria-hidden="true">masata<span class="dot">.</span></p>
+    <div class="site-footer__row">
+      <p>&copy; <span id="year">2026</span> masata.</p>
+      <a href="#top">Back to top ↑</a>
+    </div>
   </footer>
 
   <script src="js/main.js" defer></script>
